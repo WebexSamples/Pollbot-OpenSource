@@ -1,0 +1,7 @@
+inflect
+pymongo==3.10.1
+pymongo[srv]
+tornado==4.5.2
+requests
+requests-toolbelt
+python-dotenv

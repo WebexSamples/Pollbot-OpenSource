@@ -1,0 +1,63 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2",
+    "body": [
+        {
+            "type": "TextBlock",
+            "weight": "Bolder",
+            "text": "",
+            "wrap": true,
+            "size": "Medium",
+            "spacing": "Small"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Poll Started by ",
+            "size": "Small",
+            "spacing": "Small"
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "choices": [
+            ],
+            "id": "choice",
+            "spacing": "Large",
+            "style": "expanded",
+            "isMultiSelect": false,
+            "wrap": true
+        },
+        {
+            "type": "Input.Text",
+            "spacing": "None",
+            "isVisible":false,
+            "id": "question",
+            "value":""
+        },
+        {
+            "type": "TextBlock",
+            "text": "Answers are **NOT** anonymous",
+            "spacing": "None",
+            "isVisible":false
+        },
+        {
+            "type": "ActionSet",
+            "spacing": "None",
+            "id": "actionsetid",
+            "actions": [
+                {
+                    "type": "Action.Submit",
+                    "title": "Submit",
+                    "id": "submitid",
+                    "data":{"submit":"answer"}
+                },
+                {
+                    "type": "Action.Submit",
+                    "id": "resultsid",
+                    "title": "Results",
+                    "data":{"submit":"results"}
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Edit poll settings",
+            "size": "Medium",
+            "weight": "Bolder"
+        },
+        {
+            "type": "TextBlock",
+            "text": "<Poll Question>",
+            "weight": "Bolder",
+            "isSubtle": true,
+            "spacing": "Small"
+        },
+        {
+            "type": "Container",
+            "items": []
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.Submit",
+                    "title": "Save",
+                    "data": {"submit":"save"}
+                }
+            ],
+            "spacing": "None"
+        },
+        {
+            "type": "TextBlock",
+            "text": "If you need further help, please contact [Add your own support link](https://example.com).",
+            "size": "Small",
+            "weight": "Lighter"
+        }
+    ]
+}

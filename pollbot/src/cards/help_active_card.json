@@ -1,0 +1,80 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Following up on a poll?",
+            "size": "Medium",
+            "weight": "Bolder"
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "Container",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "There's an active poll in this space: "
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "<Poll Question>",
+                            "weight": "Bolder",
+                            "spacing": "None"
+                        },
+                        {
+                            "type": "ActionSet",
+                            "actions": [
+                                {
+                                    "type": "Action.Submit",
+                                    "title": "Poll Status",
+                                    "data": {
+                                        "submit": "status"
+                                    }
+                                },
+                                {
+                                    "type": "Action.Submit",
+                                    "title": "Close Poll",
+                                    "data": {
+                                        "submit": "stop"
+                                    }
+                                },
+                                {
+                                    "type": "Action.Submit",
+                                    "title": "Edit Settings",
+                                    "data": {
+                                        "submit": "edit"
+                                    }
+                                }
+                            ],
+                            "spacing":"None"
+                        }
+                    ],
+                    "spacing": "Medium"
+                }
+            ]
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.Submit",
+                    "title": "Send Me Typed Commands",
+                    "data": {
+                        "submit": "help_typed"
+                    }
+                }
+            ],
+            "spacing": "None"
+        },
+        {
+            "type": "TextBlock",
+            "text": "If you need further help, please contact [Add your own support link](https://example.com).",
+            "size": "Small",
+            "weight": "Lighter"
+        }
+    ]
+}

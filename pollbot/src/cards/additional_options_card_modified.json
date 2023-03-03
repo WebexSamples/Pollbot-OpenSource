@@ -1,0 +1,94 @@
+{
+  "type": "AdaptiveCard",
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.2",
+  "body": [
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "Poll ends in:"
+        },
+        {
+          "type": "Input.ChoiceSet",
+          "choices": [
+            {
+              "title": "5 Minutes",
+              "value": "5"
+            },
+            {
+              "title": "15 Minutes",
+              "value": "15"
+            },
+            {
+              "title": "30 Minutes",
+              "value": "30"
+            },
+            {
+              "title": "3 Hours",
+              "value": "180"
+            },
+            {
+              "title": "8 Hours",
+              "value": "480"
+            },
+            {
+              "title": "24 Hours",
+              "value": "1440"
+            },
+            {
+              "title": "3 Days",
+              "value": "4320"
+            },
+            {
+              "title": "7 days",
+              "value": "10080"
+            }
+          ],
+          "value": "480",
+          "spacing": "Small",
+          "id": "duration"
+        },
+        {
+          "type": "Input.Toggle",
+          "title": "Include me in this poll",
+          "value": "true",
+          "id": "include_self"
+        },
+        {
+          "type": "Input.Toggle",
+          "title": "Keep results private (send final results to me only)",
+          "value": "true",
+          "id": "private"
+        },
+        {
+          "type": "Input.Toggle",
+          "title": "Anonymous answers",
+          "value": "true",
+          "id": "anon"
+        },
+        {
+          "type": "Input.Toggle",
+          "title": "Multiple selectable answers per question",
+          "value": "false",
+          "id": "multi_answers"
+        }
+      ]
+    },
+    {
+      "type": "ActionSet",
+      "spacing": "None",
+      "actions": [
+        {
+          "type": "Action.Submit",
+          "title": "Multiple Questions",
+          "id": "multiple_questions",
+          "data": {
+            "submit": "multiple"
+          }
+        }
+      ]
+    }
+  ]
+}

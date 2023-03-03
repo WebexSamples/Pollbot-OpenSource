@@ -1,0 +1,87 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2",
+    "body": [
+        {
+            "type": "TextBlock",
+            "weight": "Bolder",
+            "text": "Create a poll 🗳️",
+            "wrap": true,
+            "size": "Medium",
+            "spacing": "Small"
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "**Everyone in this space** will be able to take this poll",
+                    "size": "Small",
+                    "spacing": "Small"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "",
+                    "size": "Small",
+                    "spacing": "None"
+                }
+            ],
+            "spacing": "Small"
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "Container",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Question",
+                            "spacing": "None"
+                        },
+                        {
+                            "type": "Input.Text",
+                            "placeholder": "What would you like to ask?",
+                            "spacing": "None",
+                            "id": "question"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Answers"
+                        },
+                        {
+                            "type": "Input.Text",
+                            "placeholder": "Separate answers with semicolons.",
+                            "spacing": "None",
+                            "id": "answers"
+                        }
+                    ],
+                    "spacing": "Large"
+                }
+            ]
+        },
+        {
+            "type": "ActionSet",
+            "spacing": "None",
+            "id": "actionsetid",
+            "actions": [
+                {
+                    "type": "Action.Submit",
+                    "title": "Create",
+                    "id": "submitid",
+                    "data":{"submit":"create"}
+                },
+                {
+                    "id": "show_options",
+                    "type": "Action.ShowCard",
+                    "title": "Additional Options",
+                    "card": {
+                        "type": "AdaptiveCard",
+                        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+                    }
+                }
+            ]
+        }
+    ]
+}

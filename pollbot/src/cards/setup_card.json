@@ -1,0 +1,140 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Your poll's all set up!",
+            "size": "Medium",
+            "weight": "Bolder"
+        },
+        {
+            "type": "TextBlock",
+            "text": "<space name>",
+            "spacing": "None"
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "Container",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "spacing": "None",
+                            "text": "Question:",
+                            "weight": "Bolder"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "<question>",
+                            "spacing": "None",
+                            "wrap":true
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Answers:",
+                            "spacing": "Medium",
+                            "weight": "Bolder"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "<answers>",
+                            "spacing": "None",
+                            "wrap":true
+                        }
+                    ],
+                    "spacing": "Medium"
+                }
+            ]
+        },
+        {
+            "type": "TextBlock",
+            "text": "Poll settings:",
+            "spacing": "Medium",
+            "weight": "Bolder"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Ends in 3 days (or when everyone votes)",
+            "spacing": "None"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Results are private",
+            "spacing": "None"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "<x recipients>",
+                            "weight": "Bolder"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center"
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "(including you)"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center"
+                }
+            ]
+        },
+        {
+            "type": "TextBlock",
+            "text": "Answers are anonymous"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Only one selectable answer per question",
+            "spacing": "None"
+        },
+        {
+            "type": "Input.Text",
+            "value": "",
+            "id": "room_id",
+            "spacing":"None",
+            "isVisible":false
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.Submit",
+                    "title": "Poll Status",
+                    "data":{"submit":"status"}
+                },
+                {
+                    "type": "Action.Submit",
+                    "title": "Close Poll",
+                    "data":{"submit":"stop"}
+                },
+                {
+                    "type": "Action.Submit",
+                    "title": "Edit Settings",
+                    "data":{"submit":"edit"}
+                }
+            ],
+            "spacing": "None"
+        },
+        {
+            "type": "TextBlock",
+            "text": "If you need further help, please contact [Add your own support link](https://example.com).",
+            "size": "Small",
+            "weight": "Lighter"
+        }
+    ]
+}

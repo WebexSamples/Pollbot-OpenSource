@@ -1,0 +1,48 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Ready to create a poll?",
+            "size": "Medium",
+            "weight": "Bolder"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Great. You can use this button:"
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.Submit",
+                    "title": "Create Poll",
+                    "data": {
+                        "submit": "start"
+                    }
+                },
+                {
+                    "type": "Action.Submit",
+                    "title": "Send Me Typed Commands",
+                    "data": {
+                        "submit": "help_typed"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "TextBlock",
+            "text": "💡You can also add me to a group space and I can poll everyone there.",
+            "size": "Small",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "If you need further help, please contact [Add your own support link](https://example.com).",
+            "size": "Small",
+            "weight": "Lighter"
+        }
+    ]
+}

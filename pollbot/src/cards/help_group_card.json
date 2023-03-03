@@ -1,0 +1,53 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Hi, Pollbot here 👋",
+            "size": "Medium",
+            "weight": "Bolder"
+        },
+        {
+            "type": "TextBlock",
+            "text": "With me, you can create quick polls right in Webex spaces."
+        },
+        {
+            "type": "TextBlock",
+            "text": "Polls help you and your team make better decisions faster, like say—what's for lunch? Or, how's everyone feeling about the workflow?",
+            "wrap": true,
+            "spacing": "Medium"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Ready for your first poll?",
+            "spacing": "Medium"
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.Submit",
+                    "title": "Create Poll",
+                    "data": {
+                        "submit": "start"
+                    }
+                },
+                {
+                    "type": "Action.Submit",
+                    "title": "Send Me Typed Commands",
+                    "data": {
+                        "submit": "help_typed"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "TextBlock",
+            "text": "If you need further help, please contact [Add your own support link](https://example.com).",
+            "size": "Small",
+            "weight": "Lighter"
+        }
+    ]
+}
